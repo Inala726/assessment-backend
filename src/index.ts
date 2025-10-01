@@ -1,6 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import mailchimpRoutes from "./routes/mailchimp.routes"; // added import
+
 
 dotenv.config();
 
@@ -28,6 +30,7 @@ const corsOption = {
 app.use(cors(corsOption));
 
 app.use(express.json());
+app.use("/api/integrations", mailchimpRoutes);
 
 
 app.listen(PORT, () => {
