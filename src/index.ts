@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import mailchimpRoutes from "./routes/mailchimp.routes"; // added import
+import mailchimpRoutes from "./routes/integrations.routes"; 
 
 
 dotenv.config();
